@@ -1,38 +1,20 @@
-# create-svelte
+# Hullen.nz
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+This is the source code for my personal portfolio website, [Hullen.nz](https://hullen.nz).
 
-## Creating a project
+## Folders
 
-If you're seeing this, you've probably already done this step. Congrats!
+`/src/` contains all the code I've written for the web pages.
 
-```bash
-# create a new project in the current directory
-npm init svelte
+`/src/lib/` contains the reusable components that make up each page.
 
-# create a new project in my-app
-npm init svelte my-app
-```
+`/src/routes/` contains each individual page as its own file.
 
-## Developing
+## Technologies
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+[SvelteKit](https://kit.svelte.dev/) is the main framework in which the website is written. It makes writing HTML, CSS, and Javascript much easier by handling a lot of the interactions between the languages. It also improves the website code to make it faster and nicer for users.
 
-```bash
-npm run dev
+[Bulma](https://bulma.io/) is the CSS framework that provides the style and layout for the website. It makes the website accessible on more devices and browsers.
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
 
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+[Firebase](https://firebase.google.com/) is Googles hosting and database platform. It keeps the public version of the website in the cloud for users to access.

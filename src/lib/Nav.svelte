@@ -15,7 +15,7 @@
     on:click={() => { active = false }}
     aria-current="{$page.url.pathname == '/' ? 'page' : undefined}"
     href="/">
-      <img src="/logo.png" alt="Me">
+      <!-- <img src="/logo.png" alt="Me"> -->
       <span class="has-text-dark ml-2"> Dave Hullen<span class="has-text-primary ml-0">.nz</span> </span>
     </a>
 
