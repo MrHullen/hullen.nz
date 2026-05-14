@@ -15,6 +15,7 @@
   <img
     src={urlFor(imageData.asset).url()}
     alt={imageData.alt || ''}
-    class="w-full border-4 border-surface-container-highest my-8 relative z-[110]"
+    class="w-full border-4 border-surface-container-highest my-8"
+    style="position: relative; z-index: 9999;"
   />
 {/if}
