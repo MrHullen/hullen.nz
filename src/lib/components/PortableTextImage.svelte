@@ -1,11 +1,20 @@
 <script>
   import { urlFor } from '$lib/sanity';
-  export let portableText = undefined;
+  export let portableText = {};
   export let index = undefined;
   export let isInline = undefined;
+
+  // Silence unused export warnings
+  $: _silenceWarnings = { index, isInline };
+  
+  // Extract the actual image block data
+  $: imageData = portableText?.value;
 </script>
 
-<div class="p-4 border-2 border-[#00fbfb] text-[#00fbfb] bg-[#131313] font-mono text-xs overflow-x-auto my-8">
-  <p class="font-bold mb-2">SYSTEM_DIAGNOSTIC // INSPECTING_PORTABLE_TEXT</p>
-  <pre>{JSON.stringify(portableText, null, 2)}</pre>
-</div>
+{#if imageData && imageData.asset}
+  <img
+    src={urlFor(imageData.asset).url()}
+    alt={imageData.alt || ''}
+    class="w-full border-4 border-surface-container-highest my-8 grayscale hover:grayscale-0 transition-all duration-500"
+  />
+{/if}
