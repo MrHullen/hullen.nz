@@ -32,7 +32,7 @@
         {/if}
         {#if data.post.publishedAt}
           <span class="font-label text-xs text-on-surface-variant opacity-50">
-            DATE: {new Date(data.post.publishedAt).toISOString().slice(0, 10).replace(/-/g, '.')}
+            DATESTAMP: {new Date(data.post.publishedAt).toISOString().slice(0, 10).replace(/-/g, '.')}
           </span>
         {/if}
       </div>

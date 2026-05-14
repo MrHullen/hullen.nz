@@ -178,7 +178,7 @@
             <a href="/blog/{post.slug}" class="block group relative p-6 bg-surface-container-low border-l-4 border-secondary-container hover:bg-surface-container transition-colors cursor-pointer no-underline">
               <div class="flex flex-col md:flex-row md:items-center gap-4 mb-4">
                 <span class="font-label text-xs text-secondary-container font-black">[ LOG_ID: {String(1042 - i).padStart(4, '0')} ]</span>
-                <span class="font-label text-xs text-on-surface-variant opacity-50">STARDATE: {post.date}</span>
+                <span class="font-label text-xs text-on-surface-variant opacity-50">DATESTAMP: {post.date}</span>
                 <span class="hidden md:block h-3 w-[1px] bg-surface-container-highest"></span>
                 <span class="font-label text-xs text-primary-fixed">TAG: {post.tag}</span>
               </div>

@@ -1,0 +1,20 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+.crt-overlay {
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  background-size:
+    100% 2px,
+    3px 100%;
+  pointer-events: none;
+}
+.dither-pattern {
+  background-image: radial-gradient(#353535 0.5px, transparent 0.5px);
+  background-size: 4px 4px;
+}
+.text-glow-cyan {
+  text-shadow: 0 0 10px rgba(0, 251, 251, 0.5);
+}
+.text-glow-magenta {
+  text-shadow: 0 0 10px rgba(254, 0, 254, 0.5);
+}
