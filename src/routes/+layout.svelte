@@ -4,6 +4,7 @@
   import MobileNav from '$lib/MobileNav.svelte'
   import '../app.css'
   export let params = {};
+  $: _silenceParams = params;
 </script>
 
 <div class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed overflow-x-hidden">
