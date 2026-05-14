@@ -1,90 +1,52 @@
 <script>
   export let data;
 
-  // Fallback placeholder data for layout preview
+  // Mock data for layout preview — will be replaced by Sanity queries
   const handwrittenCode = data?.handwrittenCode ?? [
     {
-      title: 'HOMEROOM_SORT',
-      description: 'Student distribution script for balanced homeroom class generation using constraint satisfaction.',
-      techStack: 'Python / Pandas / Git',
-      githubUrl: '#',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDlizoykof5CF4l7sDxP75uKsGklrQiH35a8s3070rSytsIR2FUomS32pcMv2lePIbESZIb5Oo-TCRpoCofOMhdrNl3QiZ7lhGFX3UpftIoXkICZte4qCRhwKgfu4kny5CzKodzGyOLuQCyI94qbSx4mtkMSlHwBCyuRJyYcGzROOWgLA6dG9RfYK8t7mypnpQLbc-HJ0wNUMf7AoIivlr7FKQe9iS1dPLbHteR5Pol3szF4kxkm1VB8usE80OoGq1zwV5Wh9dk-Xph'
+      title: 'Automated Homeroom Distribution',
+      description: 'Python/Pandas script for balancing student groups based on academic scores and diversity metrics.',
+      techStack: ['Python', 'Pandas'],
+      githubUrl: '#'
     },
     {
-      title: 'IB_CS_WIKI',
-      description: 'Static site generator for IB Computer Science curriculum wiki built from Markdown sources.',
-      techStack: 'Python / Jinja2 / Markdown',
-      githubUrl: '#',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAF-zgAH3FiihpKpdqiudb-hrEvqpCbGobkVPZCaixPp3Hn317WfenTecbSQJQOzdKa8sEc4U-EweRNbsfKHm4uW5FVpUocfN4gyH2gwesFKi13zYrrX4wGssUd-ARWsD7ciVhtiJ24K57tHJEuLGxTFwiNF06WeLe2xTNiymBBLAMOsvNTZUgz4Ay8SgL1mk1MoEfXN3Kja8a0O56rqrGeAQZNb1lp5oycmRodGVZFb5I3wKfRAkgzjC_kr9cFuFdE7Ufibg3lIV91'
-    },
-    {
-      title: 'ATTENDANCE_BOT',
-      description: 'Discord bot for automated attendance tracking with Google Sheets integration.',
-      techStack: 'Node.js / Discord.js / GSheets API',
-      githubUrl: '#',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBjNVugX8as4yk4UyIvt1d1yr94uElM98jKirB5vUZFMmGsSA21-NMplQzEmg1fw-ShZdR7AWhJ9QjMky5PFHiC-jtQQg4PGZZAdzM00_qXgSMzLRkRKRVxajvpOMSYTVpD9WjQdmZvUXsFlJhzHAfVHGlJx4Zshi4XrznkpTjnfeaaxUdxvLz1ILfigG3bxvY9ybAS7HJnyFJjJKIds4oNtb2rZaLcNmGA0r2Lj9NPp18RlPf-e6P4c_xTG5U9I0XC-Qm-hOPxGtLh'
+      title: 'IB CS Syllabus Wiki',
+      description: 'Comprehensive knowledge graph of the IB Computer Science syllabus using automated markdown generation.',
+      techStack: ['Git', 'Obsidian', 'Aider'],
+      githubUrl: '#'
     }
   ];
 
   const vibeCode = data?.vibeCode ?? [
     {
-      title: 'HULLEN_ARCHIVE',
-      description: 'This very site. A retro-futurist personal portfolio built with SvelteKit and Tailwind.',
-      techStack: 'SvelteKit / Tailwind / Vercel',
-      githubUrl: '#',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB9ujXlYEXSIF-Ks2NG-2npzLWw3TwmzZ4QzRWELv4Unq-SPxt0rFXVKgHEUbHHbVQ0Ru-rO16UsSdEkeG9TFVPyhRTkKOOSADQBdSBmPg0_tRxu4Hl0tvWKyPZhIBizxQOZHv0lTrpt7GJXdzKBYeSFxFI-wQAmR78dRW3JZoXlD7WRQlnsFsJEKCv2_3QjjIO-bylY84vuVkWC1VxcfyB5zmtf_OyIBdkr6qoUF2COHLP93JRSpmgllw0xCKe4rPOgXZ_7V_nln2-'
-    },
-    {
-      title: 'PAINT_TRACKER',
-      description: 'Hobby project tracker for miniature painting progress with photo timeline.',
-      techStack: 'React / Firebase / Cloudinary',
-      githubUrl: '#',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDEUyFrkkC0sBt-YsTUMr6psG-3rPlXQkJ2x7UK-lhECnG1kzAYyoKWgAaB_AH7kMv-j-41KwiRVHf8m5T0GtSnJHj8w5ETBkbRa0-h3-qGEo4Xhn3oWdZvRWGR7LnW6K5kZXyPddsPusAQ9nsbQC5gRf-QVgT14XTkfLlUXsemj5wfRW1d_3KxkBzmRIbU8APPeKEaEOE39YlHizzmLLufXmhpxr-ZO-fbr2i7HZQwvrv2o1Tmz4iocsH0V_15c9oRjOIqgmAKkiiF'
+      title: 'NEURO_LINK',
+      description: 'A decentralised social aggregate.',
+      techStack: ['SvelteKit', 'Tailwind'],
+      githubUrl: '#'
     }
   ];
 
   const armies = data?.armies ?? [
     {
-      name: 'SOUL HAUNTERS',
-      description: 'Night Lords successor warband specializing in terror tactics. Kitbashed from Mk VI marines with extensive green-stuff lightning claw conversions.',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC3cm6OHFiBr5AjmnEuY9ZaDQ3VhQDuj9wVTLUQkYtHGW9UwVXDoPVQnboFg-z8cef6f_y0na9GsMO6xP-wd2RUUL0QAuUsaUlBStiQQmW3KI7CQ1nWYat9LnPsnafJ-t2O60KrSzgdQGMNcPjY8MntwNpNTdKLjsDzjGkp9A4HphtGVik7hmAS9X94NUnoJjusue_rgpbb2KBwdvMuWO_qDJ8e9g-2nGqTihQdBnd4mqjOgDbtYMimODWa5fQlnSj5KuzjNdQDg6Ge'
+      name: 'Soul Haunters',
+      lore: 'Custom successor chapter featuring heavy oil weathering and volumetric highlights.'
     },
     {
-      name: "OMNISSIAH'S DIRGE",
-      description: 'Adeptus Mechanicus forge world detachment. Heavy weathering with oxide and oil washes over a bone-white and verdigris scheme.',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDEUyFrkkC0sBt-YsTUMr6psG-3rPlXQkJ2x7UK-lhECnG1kzAYyoKWgAaB_AH7kMv-j-41KwiRVHf8m5T0GtSnJHj8w5ETBkbRa0-h3-qGEo4Xhn3oWdZvRWGR7LnW6K5kZXyPddsPusAQ9nsbQC5gRf-QVgT14XTkfLlUXsemj5wfRW1d_3KxkBzmRIbU8APPeKEaEOE39YlHizzmLLufXmhpxr-ZO-fbr2i7HZQwvrv2o1Tmz4iocsH0V_15c9oRjOIqgmAKkiiF'
+      name: "Omnissiah's Dirge",
+      lore: 'Dark Mechanicum kitbashes.'
     },
     {
-      name: 'THE VOID-CLADE SANCTION',
-      description: 'Genestealer Cult mining operation. Converted from Necromunda kits with custom 3D-printed industrial bases.',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC2H9IUJNaueh9I-d78eA_CtD5WcZxfvc6hUSMQKTyk5heAmvqaXdfk6iTxUe93ABY5uKblroxBrm_rFJgEJ2vq8xilI8ric3AKRzW5jmwtc9k4eM9BxtZDZ9mcA_5pwkA_KzRB6ogFwLN92qdvQqm4m8viuHChFAkRSV6Wb-6YXgTnDb3G5AxhYTbnWRTXRFJuEQYf7C3_ieccjzP3K3SyDmGv3Yfqu5E0G_FjD_lxFrRd3v3VflzEPAxCZb3geGPYq8TvHrpx4mDi'
+      name: 'The Void-Clade Sanction',
+      lore: 'Deep void operative kill team.'
     }
   ];
 
   const blogPosts = data?.blogPosts ?? [
     {
-      id: '1042',
       title: 'Batch painting 20 cultists without losing sanity',
       date: '2024.03.14',
       tag: 'WARHAMMER_40K',
-      excerpt: 'The secret lies in the contrast paints and a very specific playlist of 80s synthwave. Here\'s my breakdown of the process...',
-      color: 'secondary-container'
-    },
-    {
-      id: '1041',
-      title: 'Why 0px border radius is the future of the past',
-      date: '2024.02.28',
-      tag: 'DEV_LOG',
-      excerpt: 'Modern UI design has gone too soft. It\'s time to bring back the sharp corners and technical precision of early computing...',
-      color: 'primary-fixed'
-    },
-    {
-      id: '1040',
-      title: 'Final photoshoot: Imperial Knight Aurelius',
-      date: '2024.01.15',
-      tag: 'GALLERY',
-      excerpt: 'Six months of work culminating in 150 decals and 4 layers of reactive weathering. The largest project to date...',
-      color: 'secondary-container'
+      excerpt: 'The secret lies in the contrast paints and a very specific playlist of 80s synthwave.'
     }
   ];
 </script>
@@ -119,21 +81,26 @@
     <section class="px-8 md:px-16 py-20 bg-surface-container-low relative">
       <div class="flex justify-between items-end mb-12">
         <div>
-          <h2 class="font-headline text-4xl md:text-6xl font-black italic text-secondary-container tracking-tighter uppercase mb-2">GRIMDARK_GALLERY</h2>
+          <h2 class="font-headline text-4xl md:text-6xl font-black italic text-secondary-container tracking-tighter uppercase mb-2">HOBBY_PROJECTS</h2>
           <p class="font-label text-primary-fixed text-xs tracking-widest">WARHAMMER 40,000 PAINTING &amp; MODELLING</p>
         </div>
         <div class="hidden md:block h-[2px] flex-grow mx-8 bg-surface-container-highest"></div>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {#each armies as army}
-          <div class="relative group cursor-pointer overflow-hidden border-4 border-surface-container-highest">
-            <img alt={army.name} class="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110" src={army.image} />
-            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
-            <div class="absolute inset-0 border-8 border-secondary-container/20 group-hover:border-secondary-container/40 transition-colors"></div>
-            <div class="absolute bottom-0 left-0 p-6">
-              <span class="bg-secondary-container text-on-secondary-fixed px-3 py-1 font-label text-xs font-bold mb-3 inline-block">ARMY_ROSTER</span>
-              <h3 class="font-headline text-2xl font-black text-white italic mb-2">{army.name}</h3>
-              <p class="text-on-surface-variant max-w-md font-body text-sm">{army.description}</p>
+          <div class="bg-surface border-4 border-surface-container-highest group hover:border-secondary-container transition-colors">
+            <div class="h-48 bg-surface-container flex items-center justify-center relative overflow-hidden">
+              {#if army.featuredImage}
+                <img alt={army.name} class="w-full h-full object-cover opacity-50 group-hover:opacity-100 transition-opacity" src={army.featuredImage} />
+              {:else}
+                <span class="material-symbols-outlined text-secondary-container/30 text-6xl">shield</span>
+              {/if}
+              <div class="absolute inset-0 bg-secondary-container/10 group-hover:bg-transparent transition-colors"></div>
+            </div>
+            <div class="p-6">
+              <span class="bg-secondary-container text-on-secondary-fixed px-2 py-0.5 font-label text-[10px] font-bold mb-3 inline-block">ARMY_ROSTER</span>
+              <h3 class="font-headline font-black text-white text-xl mb-2">{army.name}</h3>
+              <p class="font-body text-xs text-on-surface-variant leading-relaxed">{army.lore}</p>
             </div>
           </div>
         {/each}
@@ -155,7 +122,7 @@
     <!-- Artisanal Handwritten Code -->
     <section class="px-8 md:px-16 py-20 bg-surface">
       <div class="mb-16">
-        <h2 class="font-headline text-4xl md:text-6xl font-black italic text-primary-fixed tracking-tighter uppercase mb-4">HANDWRITTEN_CODE</h2>
+        <h2 class="font-headline text-4xl md:text-6xl font-black italic text-primary-fixed tracking-tighter uppercase mb-4">ARTISANAL_HANDWRITTEN_CODE</h2>
         <div class="flex gap-4">
           <span class="font-label text-xs px-2 py-1 bg-surface-container-highest text-on-surface-variant">TOTAL: {String(handwrittenCode.length).padStart(2, '0')}</span>
           <span class="font-label text-xs px-2 py-1 bg-surface-container-highest text-on-surface-variant">TYPE: ARTISANAL</span>
@@ -165,16 +132,25 @@
         {#each handwrittenCode as project}
           <div class="bg-surface border-4 border-surface-container-highest group hover:border-primary-fixed transition-colors">
             <div class="h-40 bg-surface-container flex items-center justify-center relative overflow-hidden">
-              <img alt={project.title} class="w-full h-full object-cover opacity-50 group-hover:opacity-100 transition-opacity" src={project.image} />
+              {#if project.image}
+                <img alt={project.title} class="w-full h-full object-cover opacity-50 group-hover:opacity-100 transition-opacity" src={project.image} />
+              {:else}
+                <span class="material-symbols-outlined text-primary-fixed/30 text-6xl">code</span>
+              {/if}
               <div class="absolute inset-0 bg-primary-fixed/20 group-hover:bg-transparent transition-colors"></div>
             </div>
             <div class="p-6">
               <h3 class="font-headline font-black text-white text-xl mb-2">{project.title}</h3>
-              <p class="font-body text-xs text-on-surface-variant leading-relaxed mb-6">{project.description}</p>
-              <div class="flex justify-between items-center">
-                <span class="font-label text-[10px] text-secondary-container">{project.techStack}</span>
-                <a href={project.githubUrl} class="inline-flex items-center">
-                  <span class="material-symbols-outlined text-primary-fixed text-sm">open_in_new</span>
+              <p class="font-body text-xs text-on-surface-variant leading-relaxed mb-4">{project.description}</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                {#each project.techStack as tech}
+                  <span class="font-label text-[10px] px-2 py-0.5 bg-surface-container-highest text-secondary-container">{tech}</span>
+                {/each}
+              </div>
+              <div class="flex justify-end">
+                <a href={project.githubUrl} class="inline-flex items-center gap-1 font-label text-[10px] text-primary-fixed hover:text-white transition-colors">
+                  <span class="material-symbols-outlined text-sm">open_in_new</span>
+                  GITHUB
                 </a>
               </div>
             </div>
@@ -195,16 +171,25 @@
         {#each vibeCode as project}
           <div class="bg-surface border-4 border-surface-container-highest group hover:border-primary-fixed transition-colors">
             <div class="h-40 bg-surface-container flex items-center justify-center relative overflow-hidden">
-              <img alt={project.title} class="w-full h-full object-cover opacity-50 group-hover:opacity-100 transition-opacity" src={project.image} />
+              {#if project.image}
+                <img alt={project.title} class="w-full h-full object-cover opacity-50 group-hover:opacity-100 transition-opacity" src={project.image} />
+              {:else}
+                <span class="material-symbols-outlined text-primary-fixed/30 text-6xl">deployed_code</span>
+              {/if}
               <div class="absolute inset-0 bg-primary-fixed/20 group-hover:bg-transparent transition-colors"></div>
             </div>
             <div class="p-6">
               <h3 class="font-headline font-black text-white text-xl mb-2">{project.title}</h3>
-              <p class="font-body text-xs text-on-surface-variant leading-relaxed mb-6">{project.description}</p>
-              <div class="flex justify-between items-center">
-                <span class="font-label text-[10px] text-secondary-container">{project.techStack}</span>
-                <a href={project.githubUrl} class="inline-flex items-center">
-                  <span class="material-symbols-outlined text-primary-fixed text-sm">open_in_new</span>
+              <p class="font-body text-xs text-on-surface-variant leading-relaxed mb-4">{project.description}</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                {#each project.techStack as tech}
+                  <span class="font-label text-[10px] px-2 py-0.5 bg-surface-container-highest text-secondary-container">{tech}</span>
+                {/each}
+              </div>
+              <div class="flex justify-end">
+                <a href={project.githubUrl} class="inline-flex items-center gap-1 font-label text-[10px] text-primary-fixed hover:text-white transition-colors">
+                  <span class="material-symbols-outlined text-sm">open_in_new</span>
+                  GITHUB
                 </a>
               </div>
             </div>
@@ -220,18 +205,18 @@
           <div class="h-1 flex-grow bg-primary-fixed/20"></div>
         </div>
         <div class="space-y-8">
-          {#each blogPosts as post}
-            <article class="group relative p-6 bg-surface-container-low border-l-4 border-{post.color} hover:bg-surface-container transition-colors cursor-pointer">
+          {#each blogPosts as post, i}
+            <article class="group relative p-6 bg-surface-container-low border-l-4 border-secondary-container hover:bg-surface-container transition-colors cursor-pointer">
               <div class="flex flex-col md:flex-row md:items-center gap-4 mb-4">
-                <span class="font-label text-xs text-{post.color} font-black">[ LOG_ID: {post.id} ]</span>
+                <span class="font-label text-xs text-secondary-container font-black">[ LOG_ID: {String(1042 - i).padStart(4, '0')} ]</span>
                 <span class="font-label text-xs text-on-surface-variant opacity-50">STARDATE: {post.date}</span>
                 <span class="hidden md:block h-3 w-[1px] bg-surface-container-highest"></span>
                 <span class="font-label text-xs text-primary-fixed">TAG: {post.tag}</span>
               </div>
-              <h3 class="font-headline text-2xl font-bold text-white group-hover:text-{post.color} transition-colors mb-4 uppercase">{post.title}</h3>
+              <h3 class="font-headline text-2xl font-bold text-white group-hover:text-secondary-container transition-colors mb-4 uppercase">{post.title}</h3>
               <p class="font-body text-on-surface-variant text-sm leading-relaxed line-clamp-2">{post.excerpt}</p>
               <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                <span class="material-symbols-outlined text-{post.color}">double_arrow</span>
+                <span class="material-symbols-outlined text-secondary-container">double_arrow</span>
               </div>
             </article>
           {/each}
