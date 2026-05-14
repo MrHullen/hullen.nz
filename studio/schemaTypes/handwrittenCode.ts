@@ -31,6 +31,11 @@ export default defineType({
       type: 'url',
     }),
     defineField({
+      name: 'liveUrl',
+      title: 'Live Hosted URL',
+      type: 'url',
+    }),
+    defineField({
       name: 'image',
       title: 'Image',
       type: 'image',

@@ -98,11 +98,19 @@
                   <span class="font-label text-[10px] px-2 py-0.5 bg-surface-container-highest text-secondary-container">{tech}</span>
                 {/each}
               </div>
-              <div class="flex justify-end">
-                <a href={project.githubUrl} class="inline-flex items-center gap-1 font-label text-[10px] text-primary-fixed hover:text-white transition-colors">
-                  <span class="material-symbols-outlined text-sm">open_in_new</span>
-                  GITHUB
-                </a>
+              <div class="flex justify-end gap-4">
+                {#if project.githubUrl}
+                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 font-label text-[10px] text-primary-fixed hover:text-white hover:scale-110 transition-all">
+                    <span class="material-symbols-outlined text-sm">code</span>
+                    REPO
+                  </a>
+                {/if}
+                {#if project.liveUrl}
+                  <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 font-label text-[10px] text-primary-fixed hover:text-white hover:scale-110 transition-all">
+                    <span class="material-symbols-outlined text-sm">public</span>
+                    LIVE
+                  </a>
+                {/if}
               </div>
             </div>
           </div>
@@ -137,11 +145,19 @@
                   <span class="font-label text-[10px] px-2 py-0.5 bg-surface-container-highest text-secondary-container">{tech}</span>
                 {/each}
               </div>
-              <div class="flex justify-end">
-                <a href={project.githubUrl} class="inline-flex items-center gap-1 font-label text-[10px] text-primary-fixed hover:text-white transition-colors">
-                  <span class="material-symbols-outlined text-sm">open_in_new</span>
-                  GITHUB
-                </a>
+              <div class="flex justify-end gap-4">
+                {#if project.githubUrl}
+                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 font-label text-[10px] text-primary-fixed hover:text-white hover:scale-110 transition-all">
+                    <span class="material-symbols-outlined text-sm">code</span>
+                    REPO
+                  </a>
+                {/if}
+                {#if project.liveUrl}
+                  <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 font-label text-[10px] text-primary-fixed hover:text-white hover:scale-110 transition-all">
+                    <span class="material-symbols-outlined text-sm">public</span>
+                    LIVE
+                  </a>
+                {/if}
               </div>
             </div>
           </div>

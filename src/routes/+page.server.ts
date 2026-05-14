@@ -7,6 +7,7 @@ export async function load() {
       description,
       techStack,
       githubUrl,
+      liveUrl,
       "image": image.asset->url
     }`
   );
@@ -17,6 +18,7 @@ export async function load() {
       description,
       techStack,
       githubUrl,
+      liveUrl,
       "image": image.asset->url
     }`
   );
