@@ -1,54 +1,5 @@
 <script>
   export let data;
-
-  // Mock data for layout preview — will be replaced by Sanity queries
-  const handwrittenCode = data?.handwrittenCode ?? [
-    {
-      title: 'Automated Homeroom Distribution',
-      description: 'Python/Pandas script for balancing student groups based on academic scores and diversity metrics.',
-      techStack: ['Python', 'Pandas'],
-      githubUrl: '#'
-    },
-    {
-      title: 'IB CS Syllabus Wiki',
-      description: 'Comprehensive knowledge graph of the IB Computer Science syllabus using automated markdown generation.',
-      techStack: ['Git', 'Obsidian', 'Aider'],
-      githubUrl: '#'
-    }
-  ];
-
-  const vibeCode = data?.vibeCode ?? [
-    {
-      title: 'NEURO_LINK',
-      description: 'A decentralised social aggregate.',
-      techStack: ['SvelteKit', 'Tailwind'],
-      githubUrl: '#'
-    }
-  ];
-
-  const armies = data?.armies ?? [
-    {
-      name: 'Soul Haunters',
-      lore: 'Custom successor chapter featuring heavy oil weathering and volumetric highlights.'
-    },
-    {
-      name: "Omnissiah's Dirge",
-      lore: 'Dark Mechanicum kitbashes.'
-    },
-    {
-      name: 'The Void-Clade Sanction',
-      lore: 'Deep void operative kill team.'
-    }
-  ];
-
-  const blogPosts = data?.blogPosts ?? [
-    {
-      title: 'Batch painting 20 cultists without losing sanity',
-      date: '2024.03.14',
-      tag: 'WARHAMMER_40K',
-      excerpt: 'The secret lies in the contrast paints and a very specific playlist of 80s synthwave.'
-    }
-  ];
 </script>
 
 <body class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed overflow-x-hidden">
@@ -87,11 +38,11 @@
         <div class="hidden md:block h-[2px] flex-grow mx-8 bg-surface-container-highest"></div>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {#each armies as army}
+        {#each data.armies ?? [] as army}
           <div class="bg-surface border-4 border-surface-container-highest group hover:border-secondary-container transition-colors">
             <div class="h-48 bg-surface-container flex items-center justify-center relative overflow-hidden">
-              {#if army.featuredImage}
-                <img alt={army.name} class="w-full h-full object-cover opacity-50 group-hover:opacity-100 transition-opacity" src={army.featuredImage} />
+              {#if army.imageUrl}
+                <img alt={army.name} class="w-full h-full object-cover opacity-50 group-hover:opacity-100 transition-opacity" src={army.imageUrl} />
               {:else}
                 <span class="material-symbols-outlined text-secondary-container/30 text-6xl">shield</span>
               {/if}
@@ -124,12 +75,12 @@
       <div class="mb-16">
         <h2 class="font-headline text-4xl md:text-6xl font-black italic text-primary-fixed tracking-tighter uppercase mb-4">ARTISANAL_HANDWRITTEN_CODE</h2>
         <div class="flex gap-4">
-          <span class="font-label text-xs px-2 py-1 bg-surface-container-highest text-on-surface-variant">TOTAL: {String(handwrittenCode.length).padStart(2, '0')}</span>
+          <span class="font-label text-xs px-2 py-1 bg-surface-container-highest text-on-surface-variant">TOTAL: {String((data.handwrittenCode ?? []).length).padStart(2, '0')}</span>
           <span class="font-label text-xs px-2 py-1 bg-surface-container-highest text-on-surface-variant">TYPE: ARTISANAL</span>
         </div>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {#each handwrittenCode as project}
+        {#each data.handwrittenCode ?? [] as project}
           <div class="bg-surface border-4 border-surface-container-highest group hover:border-primary-fixed transition-colors">
             <div class="h-40 bg-surface-container flex items-center justify-center relative overflow-hidden">
               {#if project.image}
@@ -163,12 +114,12 @@
       <div class="mb-16">
         <h2 class="font-headline text-4xl md:text-6xl font-black italic text-primary-fixed tracking-tighter uppercase mb-4">VIBE_CODE</h2>
         <div class="flex gap-4">
-          <span class="font-label text-xs px-2 py-1 bg-surface-container-highest text-on-surface-variant">TOTAL: {String(vibeCode.length).padStart(2, '0')}</span>
+          <span class="font-label text-xs px-2 py-1 bg-surface-container-highest text-on-surface-variant">TOTAL: {String((data.vibeCode ?? []).length).padStart(2, '0')}</span>
           <span class="font-label text-xs px-2 py-1 bg-surface-container-highest text-on-surface-variant">STATUS: VIBING</span>
         </div>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {#each vibeCode as project}
+        {#each data.vibeCode ?? [] as project}
           <div class="bg-surface border-4 border-surface-container-highest group hover:border-primary-fixed transition-colors">
             <div class="h-40 bg-surface-container flex items-center justify-center relative overflow-hidden">
               {#if project.image}
@@ -205,7 +156,7 @@
           <div class="h-1 flex-grow bg-primary-fixed/20"></div>
         </div>
         <div class="space-y-8">
-          {#each blogPosts as post, i}
+          {#each data.blogPosts ?? [] as post, i}
             <article class="group relative p-6 bg-surface-container-low border-l-4 border-secondary-container hover:bg-surface-container transition-colors cursor-pointer">
               <div class="flex flex-col md:flex-row md:items-center gap-4 mb-4">
                 <span class="font-label text-xs text-secondary-container font-black">[ LOG_ID: {String(1042 - i).padStart(4, '0')} ]</span>
