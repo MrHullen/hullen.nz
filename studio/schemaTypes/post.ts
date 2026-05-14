@@ -36,5 +36,11 @@ export default defineType({
       title: 'Tag',
       type: 'string',
     }),
+    defineField({
+      name: 'body',
+      title: 'Body',
+      type: 'array',
+      of: [{type: 'block'}],
+    }),
   ],
 })
