@@ -3,6 +3,10 @@
   import { renderStudio } from 'sanity';
   import config from '$lib/sanity.config.ts';
 
+  export let params = {};
+  export let form = undefined;
+  $: _silence = { params, form };
+
   onMount(() => {
     renderStudio(document.getElementById('sanity-studio'), config);
   });
