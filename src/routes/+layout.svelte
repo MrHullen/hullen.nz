@@ -1,30 +1,18 @@
-<div class="background-container">
-  <div class="red-square"></div>
-  <slot />
+<script>
+  import TopNav from '$lib/TopNav.svelte'
+  import SideNav from '$lib/SideNav.svelte'
+  import MobileNav from '$lib/MobileNav.svelte'
+  import '../app.css'
+</script>
+
+<div class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed overflow-x-hidden">
+  <div class="fixed inset-0 crt-overlay z-[100] mix-blend-overlay"></div>
+  <TopNav></TopNav>
+  <SideNav></SideNav>
+
+  <main class="pt-16 xl:pl-64 min-h-screen relative overflow-hidden">
+    <slot></slot>
+  </main>
+
+  <MobileNav></MobileNav>
 </div>
-
-<style>
-  :global(*) {
-    font-family: sans-serif;
-  }
-
-  :global(body) {
-    padding: 0;
-    margin: 0;
-    width: 100vw;
-  }
-
-  .background-container {
-    position: relative;
-  }
-
-  .red-square {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50vw;
-    height: 100%;
-    background-color: red;
-    z-index: -1;
-  }
-</style>
