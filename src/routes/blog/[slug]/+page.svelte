@@ -1,7 +1,14 @@
 <script>
   import { PortableText } from '@portabletext/svelte';
+  import PortableTextImage from '$lib/components/PortableTextImage.svelte';
 
   export let data;
+
+  const components = {
+    types: {
+      image: PortableTextImage,
+    },
+  };
 </script>
 
 <main class="bg-surface text-on-surface min-h-screen pt-16 xl:pl-64 relative overflow-hidden">
@@ -35,7 +42,7 @@
     <!-- Post Body -->
     <div class="font-body text-on-surface-variant prose prose-invert prose-p:leading-relaxed max-w-3xl">
       {#if data.post.body}
-        <PortableText value={data.post.body} />
+        <PortableText value={data.post.body} {components} />
       {:else}
         <p class="font-label text-xs text-on-surface-variant opacity-50">[ NO_CONTENT_TRANSMITTED ]</p>
       {/if}
