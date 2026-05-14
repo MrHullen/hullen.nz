@@ -1,5 +1,6 @@
 <script>
   export let data;
+  export let params = {};
 </script>
 
 <body class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed overflow-x-hidden">

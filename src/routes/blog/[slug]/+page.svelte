@@ -3,6 +3,7 @@
   import PortableTextImage from '$lib/components/PortableTextImage.svelte';
 
   export let data;
+  export let params = {};
 
   const components = {
     types: {

@@ -1,7 +1,9 @@
 <script>
   import { urlFor } from '$lib/sanity';
-
-  export let value;
+  export let value = {};
+  export let portableText = undefined;
+  export let index = undefined;
+  export let isInline = undefined;
 </script>
 
 {#if value && value.asset}
