@@ -3,8 +3,6 @@
   import PortableTextImage from '$lib/components/PortableTextImage.svelte';
 
   export let data;
-  export let params = {};
-  $: _silenceParams = params;
 
   const components = {
     types: {

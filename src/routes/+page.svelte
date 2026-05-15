@@ -1,10 +1,9 @@
 <script>
   import { activeSection } from '$lib/navStore';
   import { onMount } from 'svelte';
+  import ProjectCard from '$lib/components/ProjectCard.svelte';
 
   export let data;
-  export let params = {};
-  $: _silenceParams = params;
 
   onMount(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -103,39 +102,7 @@
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {#each data.handwrittenCode ?? [] as project}
-          <div class="bg-surface border-4 border-surface-container-highest group hover:border-primary-fixed transition-colors">
-            <div class="h-40 bg-surface-container flex items-center justify-center relative overflow-hidden">
-              {#if project.image}
-                <img alt={project.title} class="w-full h-full object-cover opacity-50 group-hover:opacity-100 transition-opacity" src={project.image} />
-              {:else}
-                <span class="material-symbols-outlined text-primary-fixed/30 text-6xl">code</span>
-              {/if}
-              <div class="absolute inset-0 bg-primary-fixed/20 group-hover:bg-transparent transition-colors"></div>
-            </div>
-            <div class="p-6">
-              <h3 class="font-headline font-black text-white text-xl mb-2">{project.title}</h3>
-              <p class="font-body text-xs text-on-surface-variant leading-relaxed mb-4">{project.description}</p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                {#each project.techStack as tech}
-                  <span class="font-label text-[10px] px-2 py-0.5 bg-surface-container-highest text-secondary-container">{tech}</span>
-                {/each}
-              </div>
-              <div class="flex justify-end gap-4">
-                {#if project.githubUrl}
-                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 font-label text-[10px] text-primary-fixed hover:text-white hover:scale-110 transition-all">
-                    <span class="material-symbols-outlined text-sm">code</span>
-                    REPO
-                  </a>
-                {/if}
-                {#if project.liveUrl}
-                  <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 font-label text-[10px] text-primary-fixed hover:text-white hover:scale-110 transition-all">
-                    <span class="material-symbols-outlined text-sm">public</span>
-                    LIVE
-                  </a>
-                {/if}
-              </div>
-            </div>
-          </div>
+          <ProjectCard {project} fallbackIcon="code" />
         {/each}
       </div>
     </section>
@@ -150,39 +117,7 @@
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {#each data.vibeCode ?? [] as project}
-          <div class="bg-surface border-4 border-surface-container-highest group hover:border-primary-fixed transition-colors">
-            <div class="h-40 bg-surface-container flex items-center justify-center relative overflow-hidden">
-              {#if project.image}
-                <img alt={project.title} class="w-full h-full object-cover opacity-50 group-hover:opacity-100 transition-opacity" src={project.image} />
-              {:else}
-                <span class="material-symbols-outlined text-primary-fixed/30 text-6xl">deployed_code</span>
-              {/if}
-              <div class="absolute inset-0 bg-primary-fixed/20 group-hover:bg-transparent transition-colors"></div>
-            </div>
-            <div class="p-6">
-              <h3 class="font-headline font-black text-white text-xl mb-2">{project.title}</h3>
-              <p class="font-body text-xs text-on-surface-variant leading-relaxed mb-4">{project.description}</p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                {#each project.techStack as tech}
-                  <span class="font-label text-[10px] px-2 py-0.5 bg-surface-container-highest text-secondary-container">{tech}</span>
-                {/each}
-              </div>
-              <div class="flex justify-end gap-4">
-                {#if project.githubUrl}
-                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 font-label text-[10px] text-primary-fixed hover:text-white hover:scale-110 transition-all">
-                    <span class="material-symbols-outlined text-sm">code</span>
-                    REPO
-                  </a>
-                {/if}
-                {#if project.liveUrl}
-                  <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 font-label text-[10px] text-primary-fixed hover:text-white hover:scale-110 transition-all">
-                    <span class="material-symbols-outlined text-sm">public</span>
-                    LIVE
-                  </a>
-                {/if}
-              </div>
-            </div>
-          </div>
+          <ProjectCard {project} fallbackIcon="deployed_code" />
         {/each}
       </div>
     </section>
@@ -198,7 +133,7 @@
             <a href="/blog/{post.slug}" class="block group relative p-6 bg-surface-container-low border-l-4 border-secondary-container hover:bg-surface-container transition-colors cursor-pointer no-underline">
               <div class="flex flex-col md:flex-row md:items-center gap-4 mb-4">
                 <span class="font-label text-xs text-secondary-container font-black">[ LOG_ID: {String(1042 - i).padStart(4, '0')} ]</span>
-                <span class="font-label text-xs text-on-surface-variant opacity-50">DATESTAMP: {post.date}</span>
+                <span class="font-label text-xs text-on-surface-variant opacity-50">DATESTAMP: {post.publishedAt ? new Date(post.publishedAt).toISOString().slice(0, 10).replace(/-/g, '.') : 'UNKNOWN'}</span>
                 <span class="hidden md:block h-3 w-[1px] bg-surface-container-highest"></span>
                 <span class="font-label text-xs text-primary-fixed">TAG: {post.tag}</span>
               </div>
