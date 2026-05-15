@@ -1,6 +1,7 @@
 <script>
   import { page } from '$app/stores';
   import { activeSection } from '$lib/navStore';
+  import { cleanRead } from '$lib/accessibilityStore';
 </script>
 
   <!-- Top Navigation -->
@@ -12,7 +13,17 @@
       <a class="font-['Space_Grotesk'] tracking-tighter uppercase text-sm active:translate-y-0.5 active:translate-x-0.5 {$page.url.pathname === '/' && $activeSection === 'code' ? 'text-[#fe00fe] border-b-4 border-[#fe00fe] pb-1' : 'text-[#00fbfb] opacity-80 hover:opacity-100 hover:bg-[#00fbfb] hover:text-[#131313] transition-colors duration-75'}" href="/#code">PROJECTS</a>
       <a class="font-['Space_Grotesk'] tracking-tighter uppercase text-sm active:translate-y-0.5 active:translate-x-0.5 {$page.url.pathname === '/' && $activeSection === 'minis' ? 'text-[#fe00fe] border-b-4 border-[#fe00fe] pb-1' : 'text-[#00fbfb] opacity-80 hover:opacity-100 hover:bg-[#00fbfb] hover:text-[#131313] transition-colors duration-75'}" href="/#minis">CORE</a>
     </div>
-    <div class="flex items-center text-[#00fbfb]">
+    <div class="flex items-center gap-4 text-[#00fbfb]">
+      <button 
+        on:click={() => $cleanRead = !$cleanRead} 
+        aria-label="Toggle Clean Read Mode" 
+        title="Toggle Clean Read Protocol"
+        class="text-[#00fbfb] hover:text-[#fe00fe] transition-colors flex items-center justify-center"
+      >
+        <span class="material-symbols-outlined text-xl">
+          {$cleanRead ? 'visibility' : 'visibility_off'}
+        </span>
+      </button>
       <a href="/studio" aria-label="Open Sanity Studio"><span class="material-symbols-outlined cursor-pointer hover:animate-pulse">terminal</span></a>
     </div>
   </nav>
