@@ -61,7 +61,7 @@
         <h1 class="font-headline text-5xl md:text-8xl font-black italic text-primary-fixed tracking-tighter leading-none mb-6 drop-shadow-[4px_4px_0_#fe00fe]">
           WELCOME TO THE<br />HULLEN ARCHIVE
         </h1>
-        <p class="font-body text-xl md:text-2xl text-on-surface-variant max-w-2xl leading-relaxed mb-10 border-l-4 border-secondary-container pl-6">Digital architect by day, miniature war-painter by night. Building immersive web environments and breathing life into grim-dark lead.</p>
+        <p class="font-body text-xl md:text-2xl text-on-surface-variant max-w-2xl leading-relaxed mb-10 border-l-4 border-secondary-container pl-6">Digital architect by day, miniature war-painter by night. Building immersive web environments and breathing life into grim-dark plastic.</p>
         <div class="flex flex-wrap gap-4">
           <button class="bg-primary-fixed text-on-primary-fixed px-8 py-4 font-headline font-black uppercase tracking-tighter text-lg hover:shadow-[0_0_20px_#00fbfb] transition-all active:translate-x-1 active:translate-y-1"> INITIALIZE_CONTACT </button>
           <button class="border-2 border-secondary-container text-secondary-container px-8 py-4 font-headline font-black uppercase tracking-tighter text-lg hover:bg-secondary-container hover:text-white transition-all active:translate-x-1 active:translate-y-1"> VIEW_REPOSITORY </button>
@@ -110,7 +110,7 @@
           <span class="material-symbols-outlined text-5xl">camera</span>
           <div>
             <h3 class="font-headline text-3xl font-black italic leading-none mb-2 uppercase">INSTAGRAM_FEED</h3>
-            <p class="font-body font-bold">DAILY UPDATES FROM THE PAINTING DESK. WIP, TUTORIALS, AND COMPLETED SQUADS.</p>
+            <p class="font-body font-bold">UPDATES FROM THE PAINTING DESK. LORE, WIP, AND COMPLETED SQUADS.</p>
           </div>
         </div>
         <a class="inline-flex items-center gap-2 border-b-4 border-on-secondary-fixed font-headline font-black uppercase text-sm hover:gap-4 transition-all flex-shrink-0" href="#">FOLLOW_PATH</a>
@@ -227,13 +227,11 @@
           <p class="font-mono text-[10px] tracking-widest text-[#00fbfb] uppercase">Valid HTML 4.01 Transitional</p>
         </div>
       </div>
-      <div class="flex gap-8">
-        <a class="font-mono text-[10px] tracking-widest text-white opacity-50 hover:text-[#00fbfb] hover:animate-pulse underline cursor-crosshair" href="#">VISITOR_MAP</a>
-        <a class="font-mono text-[10px] tracking-widest text-white opacity-50 hover:text-[#00fbfb] hover:animate-pulse underline cursor-crosshair" href="#">SOURCE_CODE</a>
-        <a class="font-mono text-[10px] tracking-widest text-white opacity-50 hover:text-[#00fbfb] hover:animate-pulse underline cursor-crosshair" href="#">GUESTBOOK</a>
+      <div class="text-center">
+        <a class="font-mono text-[10px] tracking-widest text-white opacity-50 hover:text-[#00fbfb] hover:animate-pulse underline cursor-crosshair" href="https://github.com/MrHullen/hullen.nz">SOURCE_CODE</a>
       </div>
       <div class="text-center">
-        <p class="font-mono text-[10px] tracking-widest text-white opacity-50 mb-2">© 1985-2024 HULLEN.NZ - BEST VIEWED IN NETSCAPE NAVIGATOR</p>
+        <p class="font-mono text-[10px] tracking-widest text-white opacity-50 mb-2">© 1985-2026 HULLEN.NZ - BEST VIEWED IN NETSCAPE NAVIGATOR</p>
         <p class="font-mono text-[10px] tracking-[0.3em] text-secondary-container animate-pulse">SYSTEM_STABLE // ALL_RIGHTS_RESERVED</p>
       </div>
     </footer>
