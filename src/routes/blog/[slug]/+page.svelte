@@ -13,11 +13,7 @@
   };
 </script>
 
-<main class="bg-surface text-on-surface min-h-screen pt-16 xl:pl-64 relative overflow-hidden">
-  <!-- CRT Scanline Overlay -->
-  <div class="fixed inset-0 crt-overlay z-[100] mix-blend-overlay pointer-events-none"></div>
-
-  <div class="px-8 md:px-16 py-20 max-w-4xl mx-auto relative z-10">
+<article class="px-8 md:px-16 py-12 max-w-4xl mx-auto">
     <!-- Back Link -->
     <a href="/" class="inline-flex items-center gap-2 font-label text-xs text-primary-fixed hover:text-white transition-colors mb-12 group">
       <span class="material-symbols-outlined text-sm group-hover:-translate-x-1 transition-transform">arrow_back</span>
@@ -57,5 +53,4 @@
         RETURN_TO_MAINFRAME
       </a>
     </div>
-  </div>
-</main>
+</article>
