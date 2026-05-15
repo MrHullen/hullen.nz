@@ -1,5 +1,6 @@
 <script>
   import { activeSection } from '$lib/navStore';
+  import { commandOpen } from '$lib/commandStore';
   import { onMount } from 'svelte';
   import ProjectCard from '$lib/components/ProjectCard.svelte';
 
@@ -62,10 +63,17 @@
           WELCOME TO THE<br />HULLEN ARCHIVE
         </h1>
         <p class="font-body text-xl md:text-2xl text-on-surface-variant max-w-2xl leading-relaxed mb-10 border-l-4 border-secondary-container pl-6">Digital architect by day, miniature war-painter by night. Building immersive web environments and breathing life into grim-dark plastic.</p>
-        <div class="flex flex-wrap gap-4">
-          <button class="bg-primary-fixed text-on-primary-fixed px-8 py-4 font-headline font-black uppercase tracking-tighter text-lg hover:shadow-[0_0_20px_#00fbfb] transition-all active:translate-x-1 active:translate-y-1"> INITIALIZE_CONTACT </button>
-          <button class="border-2 border-secondary-container text-secondary-container px-8 py-4 font-headline font-black uppercase tracking-tighter text-lg hover:bg-secondary-container hover:text-white transition-all active:translate-x-1 active:translate-y-1"> VIEW_REPOSITORY </button>
-        </div>
+        <button 
+          on:click={() => $commandOpen = true}
+          class="mt-12 flex items-center gap-3 font-mono text-sm sm:text-base text-[#00fbfb] hover:text-[#fe00fe] transition-colors group text-left cursor-text"
+        >
+          <span class="opacity-70">&gt;</span>
+          <span>awaiting_command...</span>
+          <span class="w-3 h-5 bg-current animate-pulse"></span>
+          <span class="opacity-50 text-xs ml-2 sm:ml-4 hidden sm:inline-block group-hover:opacity-100 transition-opacity">
+            [ Click or press Cmd + K to initialise ]
+          </span>
+        </button>
       </div>
       <!-- Hero Decorative Graphic -->
       <div class="absolute top-1/2 right-0 -translate-y-1/2 w-1/3 h-2/3 border-y-8 border-l-8 border-surface-container-high opacity-50 hidden lg:block">
