@@ -120,7 +120,7 @@
             <p class="font-body font-bold">UPDATES FROM THE PAINTING DESK. LORE, WIP, AND COMPLETED SQUADS.</p>
           </div>
         </div>
-        <a class="inline-flex items-center gap-2 border-b-4 border-on-secondary-fixed font-headline font-black uppercase text-sm hover:gap-4 transition-all flex-shrink-0" href="#">FOLLOW_PATH</a>
+        <a class="inline-flex items-center gap-2 border-b-4 border-on-secondary-fixed font-headline font-black uppercase text-sm hover:gap-4 transition-all flex-shrink-0" href="https://www.instagram.com/shedpainting/" target="_blank">FOLLOW_PATH</a>
       </div>
     </section>
     <!-- Artisanal Handwritten Code -->
