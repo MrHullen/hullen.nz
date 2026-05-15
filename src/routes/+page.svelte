@@ -5,6 +5,31 @@
 
   export let data;
 
+  let logsExpanded = false;
+  let currentLogPage = 1;
+  const logsPerPage = 3;
+
+  $: totalLogPages = data.blogPosts ? Math.ceil(data.blogPosts.length / logsPerPage) : 0;
+
+  $: visibleLogs = data.blogPosts ? (
+    logsExpanded 
+      ? data.blogPosts.slice((currentLogPage - 1) * logsPerPage, currentLogPage * logsPerPage)
+      : data.blogPosts.slice(0, 3)
+  ) : [];
+
+  function toggleLogs() {
+    logsExpanded = !logsExpanded;
+    currentLogPage = 1;
+  }
+
+  function nextLogPage() {
+    if (currentLogPage < totalLogPages) currentLogPage++;
+  }
+
+  function prevLogPage() {
+    if (currentLogPage > 1) currentLogPage--;
+  }
+
   onMount(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -129,7 +154,7 @@
           <div class="h-1 flex-grow bg-primary-fixed/20"></div>
         </div>
         <div class="space-y-8">
-          {#each data.blogPosts ?? [] as post, i}
+          {#each visibleLogs as post, i}
             <a href="/blog/{post.slug}" class="block group relative p-6 bg-surface-container-low border-l-4 border-secondary-container hover:bg-surface-container transition-colors cursor-pointer no-underline">
               <div class="flex flex-col md:flex-row md:items-center gap-4 mb-4">
                 <span class="font-label text-xs text-secondary-container font-black">[ LOG_ID: {String(1042 - i).padStart(4, '0')} ]</span>
@@ -145,8 +170,44 @@
             </a>
           {/each}
         </div>
-        <div class="mt-12 text-center">
-          <button class="font-headline font-black uppercase text-sm text-primary-fixed border-b-2 border-primary-fixed pb-1 hover:text-white hover:border-white transition-all">VIEW_ALL_LOGS</button>
+        <div class="mt-8 border-t-2 border-surface-container-highest pt-4 flex flex-col sm:flex-row justify-between items-center gap-4 font-mono text-sm">
+          {#if !logsExpanded}
+            <button 
+              on:click={toggleLogs}
+              class="text-[#00fbfb] hover:text-[#131313] hover:bg-[#00fbfb] border border-[#00fbfb] px-4 py-2 transition-colors w-full sm:w-auto"
+            >
+              > EXECUTE: FETCH_ALL_LOGS
+            </button>
+          {:else}
+            <div class="flex items-center gap-4 w-full sm:w-auto justify-between sm:justify-start text-[#00fbfb]">
+              <button 
+                on:click={prevLogPage}
+                disabled={currentLogPage === 1}
+                class="px-3 py-1 border border-[#00fbfb] hover:bg-[#00fbfb] hover:text-[#131313] disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-[#00fbfb] transition-colors"
+              >
+                [ &lt; PREV ]
+              </button>
+              
+              <span class="opacity-70">
+                PAGE {currentLogPage} / {totalLogPages}
+              </span>
+
+              <button 
+                on:click={nextLogPage}
+                disabled={currentLogPage === totalLogPages}
+                class="px-3 py-1 border border-[#00fbfb] hover:bg-[#00fbfb] hover:text-[#131313] disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-[#00fbfb] transition-colors"
+              >
+                [ NEXT &gt; ]
+              </button>
+            </div>
+
+            <button 
+              on:click={toggleLogs}
+              class="text-[#fe00fe] hover:text-[#131313] hover:bg-[#fe00fe] border border-[#fe00fe] px-4 py-2 transition-colors w-full sm:w-auto mt-4 sm:mt-0"
+            >
+              > TERMINATE_CONNECTION
+            </button>
+          {/if}
         </div>
       </div>
     </section>
