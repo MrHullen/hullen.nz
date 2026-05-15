@@ -1,11 +1,36 @@
 <script>
+  import { activeSection } from '$lib/navStore';
+  import { onMount } from 'svelte';
+
   export let data;
   export let params = {};
   $: _silenceParams = params;
+
+  onMount(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          $activeSection = entry.target.id;
+        }
+      });
+    }, { rootMargin: '-20% 0px -60% 0px' });
+
+    document.querySelectorAll('section[id]').forEach(section => {
+      observer.observe(section);
+    });
+
+    const handleScroll = () => { if (window.scrollY < 100) $activeSection = 'system'; };
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('scroll', handleScroll);
+    };
+  });
 </script>
 
     <!-- Hero Section -->
-    <section class="relative min-h-[819px] flex flex-col justify-center px-8 md:px-16 py-20 bg-surface">
+    <section id="system" class="relative min-h-[819px] flex flex-col justify-center px-8 md:px-16 py-20 bg-surface">
       <div class="absolute inset-0 dither-pattern opacity-20"></div>
       <div class="relative z-10 max-w-4xl">
         <div class="inline-block bg-primary-fixed text-on-primary-fixed px-3 py-1 mb-6 font-label text-xs font-bold uppercase tracking-widest">CONNECTION_ESTABLISHED // PORT: 8080</div>
