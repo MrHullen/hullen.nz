@@ -1,3 +1,7 @@
+<script>
+  import { page } from '$app/stores';
+</script>
+
   <!-- Side Navigation -->
   <aside class="fixed left-0 top-16 h-[calc(100vh-64px)] z-40 flex flex-col p-4 bg-[#131313] shadow-[4px_0_0_0_#1B1B1B] w-64 hidden xl:flex">
     <div class="flex items-center gap-3 mb-8 p-2 border-b-2 border-surface-container-high pb-4">
@@ -10,7 +14,7 @@
       </div>
     </div>
     <div class="flex flex-col gap-2">
-      <a href="/" class="flex items-center gap-4 p-3 bg-[#fe00fe] text-[#131313] font-headline uppercase text-xs font-bold transition-transform active:scale-95">
+      <a href="/" class="flex items-center gap-4 p-3 font-headline uppercase text-xs font-bold transition-transform active:scale-95 {$page.url.pathname === '/' ? 'bg-[#fe00fe] text-[#131313]' : 'text-[#00fbfb] hover:bg-[#353535] hover:text-white'}">
         <span class="material-symbols-outlined">memory</span> SYSTEM
       </a>
       <a href="/#code" class="flex items-center gap-4 p-3 text-[#00fbfb] hover:bg-[#353535] font-headline uppercase text-xs font-bold hover:text-white transition-transform active:scale-95">
@@ -19,7 +23,7 @@
       <a href="/#minis" class="flex items-center gap-4 p-3 text-[#00fbfb] hover:bg-[#353535] font-headline uppercase text-xs font-bold hover:text-white transition-transform active:scale-95">
         <span class="material-symbols-outlined">lan</span> NET
       </a>
-      <a href="/#logs" class="flex items-center gap-4 p-3 text-[#00fbfb] hover:bg-[#353535] font-headline uppercase text-xs font-bold hover:text-white transition-transform active:scale-95">
+      <a href="/#logs" class="flex items-center gap-4 p-3 font-headline uppercase text-xs font-bold transition-transform active:scale-95 {$page.url.pathname.startsWith('/blog') ? 'bg-[#fe00fe] text-[#131313]' : 'text-[#00fbfb] hover:bg-[#353535] hover:text-white'}">
         <span class="material-symbols-outlined">description</span> LOGS
       </a>
     </div>
