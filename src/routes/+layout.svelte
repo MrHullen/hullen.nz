@@ -2,6 +2,7 @@
   import TopNav from '$lib/TopNav.svelte'
   import SideNav from '$lib/SideNav.svelte'
   import MobileNav from '$lib/MobileNav.svelte'
+  import Lightbox from '$lib/components/Lightbox.svelte'
   import '../app.css'
   export let params = {};
   $: _silenceParams = params;
@@ -18,3 +19,4 @@
 
   <MobileNav></MobileNav>
 </div>
+<Lightbox />
