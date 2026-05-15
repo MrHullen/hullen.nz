@@ -20,6 +20,11 @@
   "dependencies": {
     "@portabletext/svelte": "^2.1.12",
     "@sanity/client": "^7.22.0",
-    "@sanity/image-url": "^2.1.1"
+    "@sanity/image-url": "^2.1.1",
+    "@sanity/vision": "^5.25.1",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "sanity": "^5.25.1",
+    "styled-components": "^6.4.1"
   }
 }
