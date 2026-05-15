@@ -31,7 +31,7 @@
       </div>
     </section>
     <!-- Hobby Projects: Armies -->
-    <section class="px-8 md:px-16 py-20 bg-surface-container-low relative">
+    <section id="minis" class="px-8 md:px-16 py-20 bg-surface-container-low relative">
       <div class="flex justify-between items-end mb-12">
         <div>
           <h2 class="font-headline text-4xl md:text-6xl font-black italic text-secondary-container tracking-tighter uppercase mb-2">HOBBY_PROJECTS</h2>
@@ -73,7 +73,7 @@
       </div>
     </section>
     <!-- Artisanal Handwritten Code -->
-    <section class="px-8 md:px-16 py-20 bg-surface">
+    <section id="code" class="px-8 md:px-16 py-20 bg-surface">
       <div class="mb-16">
         <h2 class="font-headline text-4xl md:text-6xl font-black italic text-primary-fixed tracking-tighter uppercase mb-4">ARTISANAL_HANDWRITTEN_CODE</h2>
         <div class="flex gap-4">
@@ -167,7 +167,7 @@
       </div>
     </section>
     <!-- Blog / Log Entries -->
-    <section class="px-8 md:px-16 py-20 bg-surface">
+    <section id="logs" class="px-8 md:px-16 py-20 bg-surface">
       <div class="max-w-4xl mx-auto">
         <div class="flex items-center gap-4 mb-12">
           <h2 class="font-headline text-4xl md:text-5xl font-black italic text-white uppercase tracking-tighter">TRANS_MISSIONS</h2>
@@ -224,19 +224,19 @@
   </main>
   <!-- Mobile Navigation Bottom Bar -->
   <nav class="md:hidden fixed bottom-0 left-0 w-full h-16 bg-[#131313] shadow-[0_-4px_0_0_#00fbfb] z-[110] flex items-center justify-around px-4">
-    <a class="flex flex-col items-center text-[#fe00fe]" href="#">
+    <a class="flex flex-col items-center text-[#fe00fe]" href="/">
       <span class="material-symbols-outlined">home</span>
       <span class="text-[8px] font-headline font-bold">HOME</span>
     </a>
-    <a class="flex flex-col items-center text-[#00fbfb] opacity-60" href="#">
+    <a class="flex flex-col items-center text-[#00fbfb] opacity-60" href="/#minis">
       <span class="material-symbols-outlined">brush</span>
       <span class="text-[8px] font-headline font-bold">MINIS</span>
     </a>
-    <a class="flex flex-col items-center text-[#00fbfb] opacity-60" href="#">
+    <a class="flex flex-col items-center text-[#00fbfb] opacity-60" href="/#code">
       <span class="material-symbols-outlined">code</span>
       <span class="text-[8px] font-headline font-bold">CODE</span>
     </a>
-    <a class="flex flex-col items-center text-[#00fbfb] opacity-60" href="#">
+    <a class="flex flex-col items-center text-[#00fbfb] opacity-60" href="/#logs">
       <span class="material-symbols-outlined">terminal</span>
       <span class="text-[8px] font-headline font-bold">LOGS</span>
     </a>

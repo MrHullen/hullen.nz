@@ -10,22 +10,22 @@
       </div>
     </div>
     <div class="flex flex-col gap-2">
-      <button class="flex items-center gap-4 p-3 bg-[#fe00fe] text-[#131313] font-headline uppercase text-xs font-bold transition-transform active:scale-95">
+      <a href="/" class="flex items-center gap-4 p-3 bg-[#fe00fe] text-[#131313] font-headline uppercase text-xs font-bold transition-transform active:scale-95">
         <span class="material-symbols-outlined">memory</span> SYSTEM
-      </button>
-      <button class="flex items-center gap-4 p-3 text-[#00fbfb] hover:bg-[#353535] font-headline uppercase text-xs font-bold hover:text-white transition-transform active:scale-95">
+      </a>
+      <a href="/#code" class="flex items-center gap-4 p-3 text-[#00fbfb] hover:bg-[#353535] font-headline uppercase text-xs font-bold hover:text-white transition-transform active:scale-95">
         <span class="material-symbols-outlined">storage</span> DRIVES
-      </button>
-      <button class="flex items-center gap-4 p-3 text-[#00fbfb] hover:bg-[#353535] font-headline uppercase text-xs font-bold hover:text-white transition-transform active:scale-95">
+      </a>
+      <a href="/#minis" class="flex items-center gap-4 p-3 text-[#00fbfb] hover:bg-[#353535] font-headline uppercase text-xs font-bold hover:text-white transition-transform active:scale-95">
         <span class="material-symbols-outlined">lan</span> NET
-      </button>
-      <button class="flex items-center gap-4 p-3 text-[#00fbfb] hover:bg-[#353535] font-headline uppercase text-xs font-bold hover:text-white transition-transform active:scale-95">
+      </a>
+      <a href="/#logs" class="flex items-center gap-4 p-3 text-[#00fbfb] hover:bg-[#353535] font-headline uppercase text-xs font-bold hover:text-white transition-transform active:scale-95">
         <span class="material-symbols-outlined">description</span> LOGS
-      </button>
+      </a>
     </div>
     <div class="mt-auto">
-      <button class="flex items-center gap-4 p-3 text-on-tertiary-container hover:bg-error-container w-full font-headline uppercase text-xs font-bold transition-transform active:scale-95">
+      <a href="/" class="flex items-center gap-4 p-3 text-on-tertiary-container hover:bg-error-container w-full font-headline uppercase text-xs font-bold transition-transform active:scale-95">
         <span class="material-symbols-outlined">restart_alt</span> REBOOT
-      </button>
+      </a>
     </div>
   </aside>
