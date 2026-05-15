@@ -176,7 +176,7 @@
               on:click={toggleLogs}
               class="text-[#00fbfb] hover:text-[#131313] hover:bg-[#00fbfb] border border-[#00fbfb] px-4 py-2 transition-colors w-full sm:w-auto"
             >
-              > EXECUTE: FETCH_ALL_LOGS
+              &gt; EXECUTE: FETCH_ALL_LOGS
             </button>
           {:else}
             <div class="flex items-center gap-4 w-full sm:w-auto justify-between sm:justify-start text-[#00fbfb]">
@@ -205,7 +205,7 @@
               on:click={toggleLogs}
               class="text-[#fe00fe] hover:text-[#131313] hover:bg-[#fe00fe] border border-[#fe00fe] px-4 py-2 transition-colors w-full sm:w-auto mt-4 sm:mt-0"
             >
-              > TERMINATE_CONNECTION
+              &gt; TERMINATE_CONNECTION
             </button>
           {/if}
         </div>
