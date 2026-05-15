@@ -1,5 +1,5 @@
   <!-- Top Navigation -->
-  <nav class="flex justify-between items-center px-6 h-16 w-full fixed top-0 z-50 bg-[#131313] shadow-[0_4px_0_0_#00fbfb]">
+  <nav class="flex justify-between items-center px-6 h-16 w-full fixed top-0 z-[10000] bg-[#131313] shadow-[0_4px_0_0_#00fbfb]">
     <div class="text-2xl font-black italic tracking-tighter text-[#00fbfb] drop-shadow-[0_0_8px_rgba(0,251,251,0.6)] font-headline">HULLEN.NZ</div>
     <div class="hidden md:flex gap-8 items-center">
       <a class="font-['Space_Grotesk'] tracking-tighter uppercase text-sm text-[#fe00fe] border-b-4 border-[#fe00fe] pb-1 active:translate-y-0.5 active:translate-x-0.5" href="/#logs">ARCHIVE</a>
