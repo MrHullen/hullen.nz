@@ -70,10 +70,10 @@
     <!-- Artisanal Handwritten Code -->
     <section id="code" class="px-8 md:px-16 py-20 bg-surface">
       <div class="mb-16">
-        <h2 class="font-headline text-4xl md:text-6xl font-black italic text-primary-fixed tracking-tighter uppercase mb-4">ARTISANAL_HANDWRITTEN_CODE</h2>
+        <h2 class="font-headline text-4xl md:text-6xl font-black italic text-primary-fixed tracking-tighter uppercase mb-4">ARTISANAL_CODE</h2>
         <div class="flex gap-4">
           <span class="font-label text-xs px-2 py-1 bg-surface-container-highest text-on-surface-variant">TOTAL: {String((data.handwrittenCode ?? []).length).padStart(2, '0')}</span>
-          <span class="font-label text-xs px-2 py-1 bg-surface-container-highest text-on-surface-variant">TYPE: ARTISANAL</span>
+          <span class="font-label text-xs px-2 py-1 bg-surface-container-highest text-on-surface-variant">TYPE: HANDWRITTEN</span>
         </div>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
