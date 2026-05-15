@@ -18,11 +18,11 @@
       <a href="/" class="flex items-center gap-4 p-3 font-headline uppercase text-xs font-bold transition-transform active:scale-95 {isActive('system', $page.url.pathname, $activeSection) ? 'bg-[#fe00fe] text-[#131313]' : 'text-[#00fbfb] hover:bg-[#353535] hover:text-white'}">
         <span class="material-symbols-outlined">memory</span> SYSTEM
       </a>
-      <a href="/#code" class="flex items-center gap-4 p-3 font-headline uppercase text-xs font-bold transition-transform active:scale-95 {isActive('code', $page.url.pathname, $activeSection) ? 'bg-[#fe00fe] text-[#131313]' : 'text-[#00fbfb] hover:bg-[#353535] hover:text-white'}">
-        <span class="material-symbols-outlined">storage</span> DRIVES
-      </a>
       <a href="/#minis" class="flex items-center gap-4 p-3 font-headline uppercase text-xs font-bold transition-transform active:scale-95 {isActive('minis', $page.url.pathname, $activeSection) ? 'bg-[#fe00fe] text-[#131313]' : 'text-[#00fbfb] hover:bg-[#353535] hover:text-white'}">
         <span class="material-symbols-outlined">lan</span> NET
+      </a>
+      <a href="/#code" class="flex items-center gap-4 p-3 font-headline uppercase text-xs font-bold transition-transform active:scale-95 {isActive('code', $page.url.pathname, $activeSection) ? 'bg-[#fe00fe] text-[#131313]' : 'text-[#00fbfb] hover:bg-[#353535] hover:text-white'}">
+        <span class="material-symbols-outlined">storage</span> DRIVES
       </a>
       <a href="/#logs" class="flex items-center gap-4 p-3 font-headline uppercase text-xs font-bold transition-transform active:scale-95 {isActive('logs', $page.url.pathname, $activeSection) ? 'bg-[#fe00fe] text-[#131313]' : 'text-[#00fbfb] hover:bg-[#353535] hover:text-white'}">
         <span class="material-symbols-outlined">description</span> LOGS
