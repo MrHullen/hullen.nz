@@ -37,6 +37,12 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'isHobbyPost',
+      title: 'Is this a Hobby/Army Post?',
+      type: 'boolean',
+      initialValue: false,
+    }),
+    defineField({
       name: 'body',
       title: 'Body',
       type: 'array',

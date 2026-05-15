@@ -25,6 +25,12 @@ export default defineType({
       },
     }),
     defineField({
+      name: 'linkedPost',
+      title: 'Linked Blog Post',
+      type: 'reference',
+      to: [{type: 'post'}],
+    }),
+    defineField({
       name: 'status',
       title: 'Status',
       type: 'string',

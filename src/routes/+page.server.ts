@@ -28,12 +28,13 @@ export async function load() {
       name,
       lore,
       status,
-      "imageUrl": featuredImage.asset->url
+      "imageUrl": featuredImage.asset->url,
+      "postSlug": linkedPost->slug.current
     }`
   );
 
   const blogPosts = await client.fetch(
-    `*[_type == "post"] | order(publishedAt desc) {
+    `*[_type == "post" && isHobbyPost != true] | order(publishedAt desc) {
       title,
       "slug": slug.current,
       "date": publishedAt,

@@ -36,7 +36,7 @@
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {#each data.armies ?? [] as army}
-          <div class="bg-surface border-4 border-surface-container-highest group hover:border-secondary-container transition-colors">
+          <a href={army.postSlug ? '/blog/' + army.postSlug : '#'} class="bg-surface border-4 border-surface-container-highest group hover:border-secondary-container transition-colors block no-underline">
             <div class="h-48 bg-surface-container flex items-center justify-center relative overflow-hidden">
               {#if army.imageUrl}
                 <img alt={army.name} class="w-full h-full object-cover opacity-50 group-hover:opacity-100 transition-opacity" src={army.imageUrl} />
@@ -50,7 +50,7 @@
               <h3 class="font-headline font-black text-white text-xl mb-2">{army.name}</h3>
               <p class="font-body text-xs text-on-surface-variant leading-relaxed">{army.lore}</p>
             </div>
-          </div>
+          </a>
         {/each}
       </div>
     </section>
