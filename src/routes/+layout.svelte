@@ -3,6 +3,7 @@
   import SideNav from '$lib/SideNav.svelte'
   import MobileNav from '$lib/MobileNav.svelte'
   import Lightbox from '$lib/components/Lightbox.svelte'
+  import CommandPalette from '$lib/components/CommandPalette.svelte'
   import { cleanRead } from '$lib/accessibilityStore'
   import '../app.css'
   export let params = {};
@@ -23,3 +24,4 @@
   <MobileNav></MobileNav>
 </div>
 <Lightbox />
+<CommandPalette />
