@@ -3,6 +3,7 @@
   import { commandOpen } from '$lib/commandStore';
   import { onMount } from 'svelte';
   import ProjectCard from '$lib/components/ProjectCard.svelte';
+  import TelemetryTerminal from '$lib/components/TelemetryTerminal.svelte';
 
   export let data;
 
@@ -75,11 +76,9 @@
           </span>
         </button>
       </div>
-      <!-- Hero Decorative Graphic -->
-      <div class="absolute top-1/2 right-0 -translate-y-1/2 w-1/3 h-2/3 border-y-8 border-l-8 border-surface-container-high opacity-50 hidden lg:block">
-        <div class="w-full h-full bg-surface-container-low flex items-center justify-center p-8">
-          <div class="w-full aspect-square border-4 border-dashed border-primary-fixed/20 animate-spin-slow"></div>
-        </div>
+      <!-- Telemetry Terminal -->
+      <div class="absolute top-1/2 right-8 -translate-y-1/2 w-1/3 hidden lg:block">
+        <TelemetryTerminal />
       </div>
     </section>
     <!-- Hobby Projects: Armies -->
